@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/f92fdb375c.js" crossorigin="anonymous"></script>
+
+
+    <title>high.ong</title>
+
+    <script src="/cdn-cgi/apps/head/vWvHkqI6PMiucyf16iiwsHKUQ_I.js"></script>
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="text.js" defer></script>
+
+  </head>
+  <body>
+        <div class="hero-text">
+              <h1 class="hero-text-header">skem<b class="ong">.cc</b></h1>
+              <p class="hero-text-description"></p>
+            </div>
+            <div class="button-wrapper">
+              <div class="button-wrapper">
+                <a class="button primary" onclick="playMusicAndVideo()">Hit it</a>
+</div>
+</div>
+
+<script>
+  var audio = new Audio('theme.mp3');
+  var video = document.createElement('video');
+  video.src = 'bg.mp4';
+  video.autoplay = true;
+  video.loop = true;
+  video.style.position = 'fixed';
+  video.style.top = '0';
+  video.style.left = '0';
+  video.style.width = '100%';
+  video.style.height = '100%';
+  video.style.zIndex = '-1';
+  video.style.objectFit = 'cover';
+
+  video.addEventListener('loadedmetadata', function() {
+    console.log('Video duration: ' + video.duration);
+  });
+
+  video.addEventListener('canplay', function() {
+    console.log('Video can be played');
+  });
+
+  video.addEventListener('play', function() {
+    console.log('Video is playing');
+  });
+
+  video.addEventListener('pause', function() {
+    console.log('Video is paused');
+  });
+
+  video.addEventListener('ended', function() {
+    console.log('Video has ended');
+  });
+
+  function playMusicAndVideo() {
+    if (audio.paused) {
+      audio.play();
+    }
+    document.body.appendChild(video);
+  }
+</script>
+  
+</html>
