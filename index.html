@@ -33,9 +33,9 @@
               }
             </style>
             
-              <div class="button-wrapper">
-                <a class="button primary">Hit it</a>
-              </div>
+            <div class="button-wrapper">
+              <a class="button primary">Hit it</a>
+            </div>
             </div>
             
             <script>
@@ -51,13 +51,22 @@
                 const audio = new Audio('theme.mp3');
                 audio.play();
             
-                const video = document.createElement('video');
-                video.id = 'video-background';
-                video.src = 'https://cdn.discordapp.com/attachments/1070293206375350275/1107031291066601654/bg.mp4';
-                video.autoplay = true;
-                video.loop = true;
-                video.muted = true;
-                document.body.appendChild(video);
+                const oldVideo = document.querySelector('#video-background');
+                if (oldVideo) {
+                  oldVideo.parentNode.removeChild(oldVideo); // remove existing video element
+                }
+            
+                const newVideo = document.createElement('video');
+                newVideo.id = 'video-background';
+                newVideo.src = 'https://cdn.discordapp.com/attachments/1097903202202042378/1097912617915400335/ICDfLWG.mp4';
+                newVideo.autoplay = true;
+                newVideo.loop = true;
+                newVideo.muted = true;
+                newVideo.classList.add('fullscreen', 'bg-video');
+                document.body.appendChild(newVideo); // append new video element to body
               });
-            </script>       
+            </script>
+            
+            
+                 
 </html>
