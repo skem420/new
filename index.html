@@ -64,8 +64,10 @@ newVideo.loop = true;
 newVideo.muted = true;
 newVideo.controls = false;
 newVideo.disablePictureInPicture = true;
+newVideo.playsInline = true; // add this line to prevent the video from being popped out on mobile
 newVideo.classList.add('fullscreen', 'bg-video');
 document.body.appendChild(newVideo); // append new video element to body
+
 
               });
             </script>
