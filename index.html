@@ -57,13 +57,16 @@
                 }
             
                 const newVideo = document.createElement('video');
-                newVideo.id = 'video-background';
-                newVideo.src = 'https://cdn.discordapp.com/attachments/1097903202202042378/1097912617915400335/ICDfLWG.mp4';
-                newVideo.autoplay = true;
-                newVideo.loop = true;
-                newVideo.muted = true;
-                newVideo.classList.add('fullscreen', 'bg-video');
-                document.body.appendChild(newVideo); // append new video element to body
+newVideo.id = 'video-background';
+newVideo.src = 'https://cdn.discordapp.com/attachments/1097903202202042378/1097912617915400335/ICDfLWG.mp4';
+newVideo.autoplay = true;
+newVideo.loop = true;
+newVideo.muted = true;
+newVideo.controls = false;
+newVideo.disablePictureInPicture = true;
+newVideo.classList.add('fullscreen', 'bg-video');
+document.body.appendChild(newVideo); // append new video element to body
+
               });
             </script>
             
